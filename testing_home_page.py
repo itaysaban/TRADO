@@ -51,12 +51,11 @@ class Testcase(unittest.TestCase):
         In order to navigate to the item categories page you need to press an item and not a button to lead you there.
         :return:
         """
-        item_categories = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[9]',
-                           '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[10]',
-                           '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[11]',
-                           '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[12]',
-                           '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[13]',
-]
+        item_categories = ['/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[9]/div/a/div',
+                           '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[10]/div/a/div',
+                           '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[11]/div/a/div',
+                           '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[12]/div/a/div',
+                           '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[13]/div/a/div']
 
         for item in item_categories:
             try:
