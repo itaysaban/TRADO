@@ -253,14 +253,13 @@ class Testcase(unittest.TestCase):
 
     def test9_go_to_drinks(self):
 
-        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]')))
-        for _ in range(3):
-            go_left.click()
+        time.sleep(2)
+        go_to_snacks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[13]/div/a/div/div')))
+        go_to_snacks.click()
 
         time.sleep(2)
-        go_to_drinks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[16]/div/a/div/div')))
+        go_to_drinks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[16]/div/a/div/div')))
         go_to_drinks.click()
 
         time.sleep(2)

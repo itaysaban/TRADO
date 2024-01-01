@@ -26,7 +26,7 @@ def log_in(driver):
     # click submit to move to enter code
     submit_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'form_submitBtn'))).click()
 
-    time.sleep(5)
+    time.sleep(2)
     phone = '00123456'
     phone_to_use = f'972{phone}'
     # handle the code aquiring
