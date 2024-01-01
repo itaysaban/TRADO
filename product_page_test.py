@@ -21,11 +21,11 @@ class Testcase(unittest.TestCase):
 
     def test1_arrows(self):
 
-        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[1]/div/div/div/div/div/div[1]/div/div[2]/div[2]')))
+        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]')))
         go_left.click()
         time.sleep(2)
 
-        go_right = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[1]/div/div/div/div/div/div[1]/div/div[2]/div[1]/span/i')))
+        go_right = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[1]')))
         go_right.click()
 
     def test2_items_in_importing(self):
@@ -41,10 +41,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -56,9 +57,11 @@ class Testcase(unittest.TestCase):
 
     def test3_items_in_PM(self):
 
-        go_to_PM = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[10]/div/a/div')))
+        time.sleep(2)
+        go_to_PM = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[10]/div/a/div/div')))
         go_to_PM.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a/div/div[2]/div[2]/div[1]']
 
         wait = WebDriverWait(self.driver, 10)
@@ -68,10 +71,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -83,9 +87,11 @@ class Testcase(unittest.TestCase):
 
     def test4_items_in_zxczxczx(self):
 
-        go_to_zxc = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[11]/div/a/div')))
+        time.sleep(2)
+        go_to_zxc = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[11]/div/a/div/div')))
         go_to_zxc.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a/div/div[2]/div[2]/div[1]']
 
         wait = WebDriverWait(self.driver, 10)
@@ -95,10 +101,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -110,10 +117,12 @@ class Testcase(unittest.TestCase):
 
     def test5_items_in_beers(self):
 
+        time.sleep(2)
         go_to_beers = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[12]/div/a/div')))
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[12]/div/a/div/div')))
         go_to_beers.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a[1]/div/div[2]/div[2]/div[2]/div',
                  '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a[2]/div/div[2]/div[2]/div[3]',
                  '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a[3]/div/div[2]/div[2]/div[3]']
@@ -125,10 +134,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -141,9 +151,11 @@ class Testcase(unittest.TestCase):
 
     def test6_items_in_snacks(self):
 
-        go_to_snacks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[13]/div/a/div')))
+        time.sleep(2)
+        go_to_snacks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[13]/div/a/div/div')))
         go_to_snacks.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a/div/div[2]/div[2]/div[3]']
 
         wait = WebDriverWait(self.driver, 10)
@@ -153,10 +165,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -168,10 +181,16 @@ class Testcase(unittest.TestCase):
 
     def test7_go_to_kanabis(self):
 
-        go_to_kanabis = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[14]/div/a/div')))
+        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]')))
+        for _ in range(3):
+            go_left.click()
+        time.sleep(2)
+
+        time.sleep(2)
+        go_to_kanabis = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[14]/div/a/div/div')))
         go_to_kanabis.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a[1]/div/div[2]/div[2]/div[2]/div',
                  '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a[2]/div/div[2]/div[2]/div[3]']
 
@@ -182,11 +201,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
-
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
                 # Perform some checks or actions on the new page if needed
 
             except TimeoutException:
@@ -195,12 +214,19 @@ class Testcase(unittest.TestCase):
             # Navigate back to the main page after each click
             self.driver.back()
 
-    def test7_go_to_wagwan(self):
+    def test8_go_to_wagwan(self):
 
+        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]')))
+        for _ in range(3):
+            go_left.click()
+
+        time.sleep(2)
         go_to_wagwan = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[15]/div/a/div')))
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[15]/div/a/div/div')))
         go_to_wagwan.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a/div']
 
         wait = WebDriverWait(self.driver, 10)
@@ -210,10 +236,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until( EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
@@ -224,12 +251,19 @@ class Testcase(unittest.TestCase):
             self.driver.back()
 
 
-    def test7_go_to_drinks(self):
+    def test9_go_to_drinks(self):
 
+        go_left = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div[2]')))
+        for _ in range(3):
+            go_left.click()
+
+        time.sleep(2)
         go_to_drinks = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(
-            (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/ul/li[16]/div/a/div')))
+            (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/ul/li[16]/div/a/div/div')))
         go_to_drinks.click()
 
+        time.sleep(2)
         items = ['//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div[1]/div[3]/a/div']
 
         wait = WebDriverWait(self.driver, 10)
@@ -239,10 +273,11 @@ class Testcase(unittest.TestCase):
                 element = wait.until(EC.element_to_be_clickable((By.XPATH, item)))
                 element.click()
                 print(f"Clicked on element: {item}")
-                item_add = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'micon-plus icon_icon '))).click()
-                time.sleep(1)
-                item_remove = wait.until( EC.element_to_be_clickable((By.CLASS_NAME, 'micon-minus icon_icon '))).click()
-                time.sleep(1)
+                time.sleep(2)
+                item_add = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[1]/i'))).click()
+                time.sleep(3)
+                item_remove = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div/div[1]/div[1]/div[1]/section/div/div/div[1]/div[1]/div/div[2]/div/div/span[2]'))).click()
+                time.sleep(3)
 
                 # Perform some checks or actions on the new page if needed
 
